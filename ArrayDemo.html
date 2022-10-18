@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> List of Cars </h1>
+  <div id="cars"></div>
+  Enter Car Name : 
+  <input type="text" id="txtCar"/>
+  <script>
+    
+    const cars = ["Saab", "Volvo", "BMW"];
+    // const cars = new Array("Saab", "Volvo", "BMW");
+    for(var i=0;i<cars.length;i++)
+    console.log(cars[i])
+    document.getElementById("cars").innerHTML= cars;
+  function AddElement()
+  { cars.push(document.getElementById("txtCar").value);
+ console.log(cars.length);   
+ document.getElementById("cars").innerHTML= cars;
+}
+function DeleteElement()
+{
+     cars.pop();
+     console.log(cars.length);   
+ document.getElementById("cars").innerHTML= cars;
+
+}
+  </script>
+  <button onclick="AddElement()"> Add ELement </button>
+  <button onclick="DeleteElement()"> Delete ELement </button>
+
+</body>
+</html>

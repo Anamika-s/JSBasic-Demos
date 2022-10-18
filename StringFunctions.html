@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form>
+    <div>
+      <label for="txtSentence"> Enter Sentence </label>
+      <input type="text" id="txtSentence"/> 
+    </div>
+
+    <button type="button" onClick="GetNoOfCharacters()"> Get no of Characters  </button>
+    <button type="button" onClick="ExtractCharscters()"> ExtractCharscters  </button>
+    <button type="button" onClick="Search()"> Search  </button>
+  </form>
+  <script>
+    var string ;
+    function GetSentence()
+    {
+      string = document.getElementById("txtSentence").value;
+    }
+    function GetNoOfCharacters()
+    { 
+      GetSentence();
+      console.log(" No of cGratees are " + string.length);
+    }
+
+    function ExtractCharscters()
+    {
+      GetSentence();
+      console.log(string.slice(2,10));
+
+    }
+
+    function Search()
+    {
+       GetSentence();
+       console.log(string.indexOf("book"));
+    }
+  </script>
+</body>
+</html>
